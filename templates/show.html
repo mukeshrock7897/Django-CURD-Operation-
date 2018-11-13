@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+    <title>Show Informations</title>
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+
+</head>
+<body  >
+
+
+
+
+
+<table border="2px solid" class="table" style="width: 80%;margin-left: 10%;">
+    <tr class="table thead-dark">
+        <th>Employee ID</th>
+        <th>Employee Name</th>
+        <th>Employee Email</th>
+        <th>Employee Contact</th>
+        <th>Actions</th>
+    </tr>
+    <tbody>
+    {% for employee in employees %}
+
+    <tr>
+        <td>{{ employee.eid }}</td>
+        <td>{{ employee.ename }}</td>
+        <td>{{ employee.eemail }}</td>
+        <td>{{ employee.econtact }}</td>
+    <td>
+        <a href="/edit/{{ employee.id }}"><span class="glyphicon glyphicon-edit">Edit</span></a>
+        <a href="/delete/{{ employee.id }}"><span class="glyphicon glyphicon-remove">Delete</span></a>
+
+    </td>
+    </tr>
+
+    {% endfor %}
+    <tr>
+        <td colspan="5"><a href="/emp" class="btn btn-primary" style="width: 100%;">Add New Employee</a></td>
+    </tr>
+    </tbody>
+</table>
+<br>
+
+
+</body>
+</html>

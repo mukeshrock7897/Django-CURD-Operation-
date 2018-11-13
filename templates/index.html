@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <title>Create Employee</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+</head>
+<body  >
+
+
+
+
+
+
+
+    <form method="post" class="form-row" action="/emp">
+    {% csrf_token %}
+    <table border="2px solid" class="table" style="width: 80%;margin-left: 10%;">
+
+        <p class="h4">Enter Employee Details</p>
+        <br>
+
+    <tr>
+        <th>Employee ID</th><td>{{ form.eid }}</td>
+    </tr>
+
+
+
+    <tr>
+        <th>Employee Name</th><td>{{ form.ename }}</td>
+    </tr>
+
+
+    <tr>
+        <th>Employee Email</th><td>{{ form.eemail }}</td>
+    </tr>
+
+
+
+    <tr>
+        <th>Employee Contact</th><td>{{ form.econtact }}</td>
+    </tr>
+
+    <tr>
+        <td colspan="2"> <button type="submit" style="width: 100%;" class="btn btn-primary">Submit</button></td>
+    </tr>
+
+</table>
+
+</form>
+
+</body>
+</html>
